@@ -1,0 +1,133 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "Dongle-light";
+  src: url("Dongle/Dongle-light.ttf");
+  
+}
+@font-face {
+  font-family: "Dongle-Regular";
+  src: url("Dongle/Dongle-Regular.ttf");
+  
+}
+@font-face {
+  font-family: "Dongle-light";
+  src: url("Dongle/Dongle-Bold.ttf");
+  
+}
+header{
+  display: flex;
+  padding: 20px;
+  background-color: azure;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+.logo img{
+  max-width: 25%; 
+  
+}
+.nav-menu ul{
+  display: flex;
+
+}
+.nav-menu li{
+  list-style: none;
+  margin-right: 20px;
+}
+.nav-menu li:last-child{
+  margin-right: 0;
+
+}
+.nav-menu a{
+  
+  text-decoration: none;
+  font-family: Dongle-bold;
+  font-size:large;
+  color: #333 ;
+  margin-left: 100px;
+  padding-right: 1.5px;
+}
+.nav-menu a:hover{
+  color: coral;
+}
+.hero{
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+
+}
+.hero-image img{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero-content{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+.hero-content h1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+}
+.hero-content p{
+  font-family: "Dongle-regular";
+  font-size: 1.8rem;
+  padding-bottom: 12px;
+
+}
+.hero-button{
+  text-decoration: none;
+  color: wheat;
+  background-color: chocolate;
+  font-size: medium;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 50px;
+  transition: all ease-in 0.3s;
+}
+.hero-button:hover{
+  background-color: aqua;
+}
+.destination h2{
+  font-size: 2rem;
+  font-family:'Times New Roman', Times, serif;
+  margin: 40px 80px;
+  text-align: center;
+  margin-bottom: 40px;
+  top: 10vh;
+}
+.destination-grid{
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+.destinaton-item img{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  
+ 
+}
+.destinaton-item {
+  text-align: center;
+}
+.destination-item h3{
+  font-size: larger;
+  text-align: center;
+}
+.destination-item p{
+  font-size: medium;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+.destination{
+  margin-top: 10vh;
+}

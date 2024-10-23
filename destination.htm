@@ -1,0 +1,322 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .destination h1 {
+            font-size: 3rem;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 40px 80px;
+            text-align: center;
+            margin-bottom: 40px;
+            top: 10vh;
+
+        }
+
+        .destination-grid {
+            display: flex;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 40px;
+        }
+
+        .destinaton-item img {
+            width: 50px;
+            height: 40px;
+            object-fit: cover;
+
+
+        }
+
+        .destinaton-item {
+            text-align: center;
+
+        }
+
+        .destination-item h3 {
+            font-size: larger;
+            text-align: center;
+        }
+
+        .destination-item p {
+            font-size: medium;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        .destination {
+            margin-top: 10vh;
+            background-size: 100%;
+            text-align: center;
+            align-items: center;
+            background-image: url(background..jpg);
+            background-size: ;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="destination">
+
+        <h1>Popular Destinations</h1>
+
+        <div class="destination-grid">
+            <div class="destination-item">
+                <img src="new york.jpg" alt="" style="height: 100%; width: 450px; margin-left: 30px;">
+                <h3>New York City</h3>
+                <p>Visit the city that never sleeps and discover its iconic landmarks,world-class museums,and diverse
+                    neighbourhoods.</p>
+
+            </div>
+            <div class="destination-item">
+                <img src="paris.jpg" alt="" style="height: 100%; width: 450px;">
+                <h3>Paris</h3>
+                <p>Experience the romance and culture of the a City of Lights, from the Eiffel Tower to the Louvre
+                    Museum.</p>
+
+            </div>
+            <div class="destination-item">
+                <img src="tokyo.jpg" alt="" style="height: 100%; width: 450px;">
+                <h3>Tokyo</h3>
+                <p>Explore the vibrant city of Tokyo and immerse yourself in its unique blend of ancient traditions and
+                    modern technology.</p>
+
+            </div>
+            <div class="destination-item">
+                <img src="hawaii.jpg" alt="" style="height: 100%; width: 450px;">
+                <h3>Tokyo</h3>
+                <p>Explore the vibrant city of Tokyo and immerse yourself in its unique blend of ancient traditions and
+                    modern technology.</p>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Destinations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .destination {
+            padding: 60px 20px;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+                        url("destinationbg.jpg");
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+        }
+
+        .destination h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .destination h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: #3498db;
+        }
+
+        .destination-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .destination-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .destination-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .destination-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .destination-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .destination-content {
+            padding: 20px;
+        }
+
+        .destination-item h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .destination-item p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .destination-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #f8f9fa;
+            border-top: 1px solid #eee;
+        }
+
+        .price {
+            color: #2ecc71;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .rating {
+            color: #f1c40f;
+        }
+
+        .destination-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(52, 152, 219, 0.9);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .destination h1 {
+                font-size: 2rem;
+            }
+
+            .destination-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="destination">
+        <h1>Popular Destinations</h1>
+        <div class="destination-grid">
+            <div class="destination-item">
+                <span class="destination-tag">Most Popular</span>
+                <img src="new york.jpg" alt="New York City">
+                <div class="destination-content">
+                    <h3>New York City</h3>
+                    <p>Experience the city that never sleeps with its iconic skyline, Central Park, Broadway shows, and diverse cultural scene.</p>
+                </div>
+                <div class="destination-meta">
+                    <div class="price">From $999</div>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="destination-item">
+                <span class="destination-tag">Romantic</span>
+                <img src="paris.jpg" alt="Paris">
+                <div class="destination-content">
+                    <h3>Paris</h3>
+                    <p>Discover the magic of the City of Light with its charming cafes, world-class museums, and iconic Eiffel Tower.</p>
+                </div>
+                <div class="destination-meta">
+                    <div class="price">From $1,199</div>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="destination-item">
+                <span class="destination-tag">Cultural</span>
+                <img src="tokyo.jpg"alt="Tokyo">
+                <div class="destination-content">
+                    <h3>Tokyo</h3>
+                    <p>Immerse yourself in Japan's capital where ancient traditions meet futuristic innovations and unique pop culture.</p>
+                </div>
+                <div class="destination-meta">
+                    <div class="price">From $1,499</div>
+                    <div class="rating">★★★★½</div>
+                </div>
+            </div>
+
+            <div class="destination-item">
+                <span class="destination-tag">Tropical</span>
+                <img src="hawaii.jpg" alt="Hawaii">
+                <div class="destination-content">
+                    <h3>Hawaii</h3>
+                    <p>Experience paradise with pristine beaches, volcanic landscapes, and the warm aloha spirit of the islands.</p>
+                </div>
+                <div class="destination-meta">
+                    <div class="price">From $1,299</div>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="destination-item">
+                <span class="destination-tag">Adventure</span>
+                <img src="machupicchu.jpg" alt="Machu Picchu">
+                <div class="destination-content">
+                    <h3>Machu Picchu</h3>
+                    <p>Explore the ancient Incan citadel set high in the Andes Mountains, surrounded by breathtaking views.</p>
+                </div>
+                <div class="destination-meta">
+                    <div class="price">From $1,599</div>
+                    <div class="rating">★★★★½</div>
+                </div>
+            </div>
+
+            <div class="destination-item">
+                <span class="destination-tag">Luxury</span>
+                <img src="dubai.jpg" alt="Dubai">
+                <div class="destination-content">
+                    <h3>Dubai</h3>
+                    <p>Visit this ultra-modern city with its towering skyscrapers, luxury shopping, and desert adventures.</p>
+                </div>
+                <div class="destination-meta">
+                    <div class="price">From $2,000</div>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Hub - Discover Amazing Destinations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            position: absolute;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 100px;
+            width: auto;
+        }
+
+        .nav-menu ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #0088cc;
+        }
+
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #0088cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .hero-button:hover {
+            background-color: #006699;
+        }
+
+        section.destination {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .destination h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .destination-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .destination-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .destination-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .destination-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .destination-item h3 {
+            padding: 1.5rem 1.5rem 0.5rem;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .destination-item p {
+            padding: 0 1.5rem 1.5rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .destination h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.jpg.jpg" alt="Travel Hub Logo"></a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="travelwebsite.htm">Home</a></li>
+                    <li><a href="about.htm">About</a></li>
+                    <li><a href="destination.htm">Destinations</a></li>
+                    <li><a href="hotel.htm">Hotels</a></li>
+                    <li><a href="CONTAACT.HTM">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-image">
+                <img src="Desktop-Travel-Images.jpg" alt="Beautiful travel destination">
+            </div>
+            <div class="hero-content">
+                <h1>Welcome to Travel Hub</h1>
+                <p>Discover amazing destinations and create unforgettable memories with us</p>
+                <a href="SUBMIT.HTM" class="hero-button">Book Your Adventure</a>
+            </div>
+        </section>
+
+        <section class="destination">
+            <h2>Popular Destinations</h2>
+            <div class="destination-grid">
+                <div class="destination-item">
+                    <img src="new york.jpg" alt="New York City skyline">
+                    <h3>New York City</h3>
+                    <p>Visit the city that never sleeps and discover its iconic landmarks, world-class museums, and
+                        diverse neighborhoods.</p>
+                </div>
+                <div class="destination-item">
+                    <img src="paris.jpg" alt="Paris Eiffel Tower">
+                    <h3>Paris</h3>
+                    <p>Experience the romance and culture of the City of Lights, from the Eiffel Tower to the Louvre
+                        Museum.</p>
+                </div>
+                <div class="destination-item">
+                    <img src="tokyo.jpg" alt="Tokyo cityscape">
+                    <h3>Tokyo</h3>
+                    <p>Explore the vibrant city of Tokyo and immerse yourself in its unique blend of ancient traditions
+                        and modern technology.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="destination">
+            <h2>Luxury Hotels</h2>
+            <div class="destination-grid">
+                <div class="destination-item">
+                    <img src="hotel1.jpg" alt="Waldorf Astoria exterior">
+                    <h3>The Waldorf Astoria</h3>
+                    <p>Indulge in luxury at the Waldorf Astoria, a historic landmark hotel renowned for its elegance and
+                        sophistication.</p>
+                </div>
+                <div class="destination-item">
+                    <img src="hotel2.jpg" alt="Four Seasons interior">
+                    <h3>The Four Seasons</h3>
+                    <p>Relax in style at the Four Seasons, featuring breathtaking views, an award-winning spa, and
+                        gourmet dining options.</p>
+                </div>
+                <div class="destination-item">
+                    <img src="hotel3.webp" alt="Ritz Carlton lobby">
+                    <h3>The Ritz Carlton</h3>
+                    <p>Experience luxury accommodation and impeccable service at the Ritz Carlton, located in the heart
+                        of the city.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="destination">
+            <h2>Featured Activities</h2>
+            <div class="destination-grid">
+                <div class="destination-item">
+                    <img src="hiking.jpg" alt="Grand Canyon hiking">
+                    <h3>Hiking the Grand Canyon</h3>
+                    <p>Explore the breathtaking beauty of the Grand Canyon on a guided hiking tour.</p>
+                </div>
+                <div class="destination-item">
+                    <img src="whale.jpg" alt="Whale watching in Alaska">
+                    <h3>Whale Watching in Alaska</h3>
+                    <p>Experience the thrill of seeing majestic whales up close on a scenic boat tour in Alaska.</p>
+                </div>
+                <div class="destination-item">
+                    <img src="snorkiling.jpg" alt="Snorkeling in Hawaii">
+                    <h3>Snorkeling in Hawaii</h3>
+                    <p>Discover the vibrant underwater world of Hawaii on a guided snorkeling excursion.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

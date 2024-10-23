@@ -1,0 +1,192 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Travel Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       
+        .about-section {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),url(about.jpg);
+                
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-content {
+            position: relative;
+        }
+
+        .about-content::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(180deg, #2196F3, #4CAF50);
+            border-radius: 2px;
+        }
+
+        .about-content h2 {
+            font-size: 2.8rem;
+            color: #1e3c72;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .highlight {
+            color: #2196F3;
+            font-weight: 600;
+        }
+
+        .travel-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 25px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            color: #2196F3;
+            margin-bottom: 15px;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #1e3c72, #2196F3);
+            /*-webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;*/
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .image-collage {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .collage-img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .collage-img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 968px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-content h2 {
+                font-size: 2.3rem;
+            }
+
+            .travel-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .travel-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .image-collage {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>About Us</h2>
+                    <p>Welcome to <span class="highlight">Travelling Hub</span>, your trusted companion for discovering the world's most incredible destinations. We believe that travel is not just about visiting new places but about experiencing new cultures, flavors, and moments that leave a lasting impression.</p>
+                    <p>Our mission is to inspire and help you craft the perfect trip, whether you're planning a weekend getaway or a grand adventure across the globe. With expert insights, curated itineraries, and travel tips from seasoned explorers, we aim to make every journey seamless and unforgettable.</p>
+                    <p>Whether you're seeking hidden gems off the beaten path or popular tourist destinations, <span class="highlight">Travelling Hub</span> is here to guide you every step of the way. Start your adventure with us, and let's create memories that will last a lifetime!</p>
+                    
+                    <div class="travel-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">150+</div>
+                            <div class="stat-label">Destinations</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10K+</div>
+                            <div class="stat-label">Happy Travelers</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Travel Guides</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-collage">
+                    <img src="paris.jpg" alt="Travel Destination 1" class="collage-img">
+                    <img src="hawaii.jpg" alt="Travel Destination 2" class="collage-img">
+                    <img src="new york.jpg" alt="Travel Destination 3" class="collage-img">
+                    <img src="tokyo.jpg" alt="Travel Destination 4" class="collage-img">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            justify-content: center;
+            background: linear-gradient(135deg, #1e4d92, #2196f3);
+            padding: 20px;
+        }
+
+        form {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            background-color: white;
+            padding: 30px;
+            width: 500px;
+        }
+
+        #rh2 {
+            text-align: center;
+            margin-bottom: 25px;
+            margin-top: 10px;
+            color: #1e4d92;
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #1e4d92;
+            outline: none;
+        }
+
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1em;
+        }
+
+        .row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .col {
+            flex: 1;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #1e4d92;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #153a70;
+        }
+
+        .required {
+            color: #e41e3f;
+        }
+
+        .price-info {
+            text-align: right;
+            margin-top: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h2 id="rh2">Travel Booking Form</h2>
+        
+        <div class="form-group">
+            <label for="name">Full Name <span class="required">*</span></label>
+            <input type="text" id="name" name="myname" required placeholder="Enter your full name">
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="myemail" required placeholder="Enter your email">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender">
+                        <option value="">Select gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="nationality">Nationality</label>
+                    <input type="text" id="nationality" name="nationality" placeholder="Enter your nationality">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="destination">Destination <span class="required">*</span></label>
+            <select id="destination" name="destination" required>
+                <option value="">Select destination</option>
+                <option value="iceland">Iceland - Northern Lights Adventure</option>
+                <option value="alaska">Alaska - Wilderness Explorer</option>
+                <option value="switzerland">Switzerland - Alpine Experience</option>
+                <option value="norway">Norway - Fjords & Mountains</option>
+                <option value="tokyo">Tokyo - Urban Discovery</option>
+                <option value="bali">Bali - Tropical Paradise</option>
+                <option value="paris">Paris - City of Lights</option>
+                <option value="dubai">Dubai - Desert Luxury</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="checkin">Check-in Date <span class="required">*</span></label>
+                    <input type="date" id="checkin" name="checkin" required>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="checkout">Check-out Date <span class="required">*</span></label>
+                    <input type="date" id="checkout" name="checkout" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="adults">Adults (18+)</label>
+                    <input type="number" id="adults" name="adults" min="1" value="1">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="children">Children (0-17)</label>
+                    <input type="number" id="children" name="children" min="0" value="0">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="preferences">Special Preferences</label>
+            <textarea id="preferences" name="preferences" rows="3" placeholder="Any dietary requirements, accessibility needs, or special requests?"></textarea>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Book Now</button>
+        </div>
+
+        <div class="price-info">
+            * Required fields
+        </div>
+    </form>
+</body>
+</html>

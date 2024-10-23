@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Hotels</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .hotels-section {
+            padding: 60px 20px;
+            background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
+                        url("hotelbg.jpg");
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: #c5a47e;
+        }
+
+        .hotels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hotel-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .hotel-image {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .hotel-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .hotel-card:hover .hotel-image img {
+            transform: scale(1.05);
+        }
+
+        .hotel-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(197, 164, 126, 0.9);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .hotel-content {
+            padding: 25px;
+        }
+
+        .hotel-title {
+            font-size: 1.5rem;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .hotel-location {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .hotel-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .hotel-features {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            background: #f8f9fa;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .hotel-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            background: #f8f9fa;
+            border-top: 1px solid #eee;
+        }
+
+        .hotel-price {
+            font-size: 1.2rem;
+            color: #c5a47e;
+            font-weight: bold;
+        }
+
+        .hotel-rating {
+            color: #ffd700;
+        }
+
+        .book-now {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #c5a47e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .book-now:hover {
+            background: #b08d66;
+        }
+
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2rem;
+            }
+
+            .hotels-grid {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hotels-section">
+        <h2>Luxury Hotels</h2>
+        <div class="hotels-grid">
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="hotel1.jpg" alt="Waldorf Astoria">
+                    <span class="hotel-badge">5-Star Luxury</span>
+                </div>
+                <div class="hotel-content">
+                    <h3 class="hotel-title">The Waldorf Astoria</h3>
+                    <div class="hotel-location">
+                        New York City, USA
+                    </div>
+                    <p class="hotel-description">Indulge in unparalleled luxury at the iconic Waldorf Astoria, where timeless elegance meets modern sophistication in the heart of Manhattan.</p>
+                    <div class="hotel-features">
+                        <span class="feature">Spa</span>
+                        <span class="feature">Fine Dining</span>
+                        <span class="feature">Pool</span>
+                        <span class="feature">Butler Service</span>
+                    </div>
+                </div>
+                <div class="hotel-footer">
+                    <div class="hotel-price">From $599/night</div>
+                    <div class="hotel-rating">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="hotel3.webp" alt="Four Seasons">
+                    <span class="hotel-badge">Mountain View</span>
+                </div>
+                <div class="hotel-content">
+                    <h3 class="hotel-title">Four Seasons Resort</h3>
+                    <div class="hotel-location">
+                        Bora Bora, French Polynesia
+                    </div>
+                    <p class="hotel-description">Experience paradise in overwater bungalows with pristine lagoon views, world-class service, and exclusive access to private beaches.</p>
+                    <div class="hotel-features">
+                        <span class="feature">Private Beach</span>
+                        <span class="feature">Water Sports</span>
+                        <span class="feature">Spa</span>
+                        <span class="feature">Infinity Pool</span>
+                    </div>
+                </div>
+                <div class="hotel-footer">
+                    <div class="hotel-price">From $899/night</div>
+                    <div class="hotel-rating">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="hotel2.jpg" alt="Ritz Carlton">
+                    <span class="hotel-badge">City Center</span>
+                </div>
+                <div class="hotel-content">
+                    <h3 class="hotel-title">The Ritz-Carlton</h3>
+                    <div class="hotel-location">
+                        Dubai, UAE
+                    </div>
+                    <p class="hotel-description">Discover the height of luxury in this architectural masterpiece, featuring panoramic city views and legendary Ritz-Carlton service.</p>
+                    <div class="hotel-features">
+                        <span class="feature">Rooftop Pool</span>
+                        <span class="feature">Michelin Star Restaurant</span>
+                        <span class="feature">Luxury Spa</span>
+                        <span class="feature">Sky Lounge</span>
+                    </div>
+                </div>
+                <div class="hotel-footer">
+                    <div class="hotel-price">From $799/night</div>
+                    <div class="hotel-rating">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="burj al arab.jpg" alt="Burj Al Arab">
+                    <span class="hotel-badge">7-Star Luxury</span>
+                </div>
+                <div class="hotel-content">
+                    <h3 class="hotel-title">Burj Al Arab</h3>
+                    <div class="hotel-location">
+                        Dubai, UAE
+                    </div>
+                    <p class="hotel-description">Stay in the world's most luxurious hotel, featuring butler service, gold-leaf interiors, and breathtaking views of the Arabian Gulf.</p>
+                    <div class="hotel-features">
+                        <span class="feature">Helipad</span>
+                        <span class="feature">Private Beach</span>
+                        <span class="feature">Underwater Restaurant</span>
+                        <span class="feature">Royal Suite</span>
+                    </div>
+                </div>
+                <div class="hotel-footer">
+                    <div class="hotel-price">From $1,499/night</div>
+                    <div class="hotel-rating">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="aman1.jpg" alt="Aman Tokyo">
+                    <span class="hotel-badge">Urban Sanctuary</span>
+                </div>
+                <div class="hotel-content">
+                    <h3 class="hotel-title">Aman Tokyo</h3>
+                    <div class="hotel-location">
+                        Tokyo, Japan
+                    </div>
+                    <p class="hotel-description">Experience traditional Japanese aesthetics with modern luxury in this urban sanctuary high above the Tokyo skyline.</p>
+                    <div class="hotel-features">
+                        <span class="feature">Zen Garden</span>
+                        <span class="feature">Traditional Spa</span>
+                        <span class="feature">Tea Ceremony</span>
+                        <span class="feature">City Views</span>
+                    </div>
+                </div>
+                <div class="hotel-footer">
+                    <div class="hotel-price">From $699/night</div>
+                    <div class="hotel-rating">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="singapore.jpg" alt="Raffles Hotel">
+                    <span class="hotel-badge">Historic Luxury</span>
+                </div>
+                <div class="hotel-content">
+                    <h3 class="hotel-title">Raffles Singapore</h3>
+                    <div class="hotel-location">
+                        Singapore
+                    </div>
+                    <p class="hotel-description">Step into a colonial-style paradise where heritage meets luxury in this iconic Singapore landmark.</p>
+                    <div class="hotel-features">
+                        <span class="feature">Heritage Tours</span>
+                        <span class="feature">Colonial Architecture</span>
+                        <span class="feature">Famous Long Bar</span>
+                        <span class="feature">Afternoon Tea</span>
+                    </div>
+                </div>
+                <div class="hotel-footer">
+                    <div class="hotel-price">From $749/night</div>
+                    <div class="hotel-rating">★★★★★</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
